@@ -24,6 +24,20 @@ CREATE TABLE `home_highlights` (
   PRIMARY KEY (`id`)
 );
 
+CREATE TABLE `house_rules` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `suitable_for_children` BOOLEAN,
+  `smoking` BOOLEAN,
+  `pets` BOOLEAN, 
+  `events` BOOLEAN, 
+  `check_in` DATE, 
+  `check_out` DATE, 
+  `custom_message` VARCHAR(150),
+  `stair_access` BOOLEAN, 
+  `security_deposit` INT,
+  PRIMARY KEY (`id`)
+);
+
 CREATE TABLE `amenities` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `room_id` INT,
@@ -56,7 +70,7 @@ CREATE TABLE `facilities` (
   PRIMARY KEY (`id`)
 );
 
-CREATE TABLE`guest_access` (
+CREATE TABLE `guest_access` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `host_greets` BOOLEAN,
   `lockbox` BOOLEAN,
@@ -79,25 +93,11 @@ CREATE TABLE `bed_and_bath` (
   PRIMARY KEY (`id`)
 );
 
-CREATE TABLE`safety_features` (
+CREATE TABLE `safety_features` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `fire_extinguisher` BOOLEAN,
   `smoke_detector` BOOLEAN,
   `first_aid` BOOLEAN,
-  PRIMARY KEY (`id`)
-);
-
-CREATE TABLE `house_rules` (
-  `id` INT,
-  `suitable_for_children` BOOLEAN,
-  `smoking` BOOLEAN,
-  `pets` BOOLEAN, 
-  `events` BOOLEAN, 
-  `check_in` DATE, 
-  `check_out` DATE, 
-  `custom_message` VARCHAR,
-  `stair_access` BOOLEAN, 
-  `security_deposit` INT,
   PRIMARY KEY (`id`)
 );
 
