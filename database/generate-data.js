@@ -18,17 +18,11 @@ const generateData = (field, fileName) => {
 
 };
 
-const getRandomIndex = (num) => {
+const getRandomIndex = (max) => {
   // i: number
   // o: number, random between 0 and num
 
-  function getRandomIntInclusive(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min + 1)) + min; //The maximum is inclusive and the minimum is inclusive 
-  };
-
-  return getRandomIntInclusive(0, num);
+  return Math.floor(Math.random() * (max + 1));
 }
 
 const capitalizeFirstLetter = (word) => {
@@ -47,7 +41,7 @@ const generateExperience = () => {
 
   let result = ``;
 
-  for (let i = 0; i <= 100; i++) {
+  for (let i = 0; i <= 100; i += 1) {
     let adjective1 = data.adjectives.split('\n')[getRandomIndex(32)];
     adjective1 = capitalizeFirstLetter(adjective1);
 
@@ -65,4 +59,3 @@ const generateExperience = () => {
 generateData(data.hostNames, 'host-names');
 generateData(data.cities, 'cities');
 generateData(generateExperience(), 'listing-name');
-
