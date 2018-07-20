@@ -1,5 +1,6 @@
 const fs = require('fs');
 const data = require('./data.js');
+const faker = require('faker');
 // generate data
 // write to csv file
 
@@ -7,23 +8,19 @@ const generateData = (field, fileName) => {
   // i: string, and string
   // o: side effect, writes field content to fileName
 
-  let info = field.split('\n').join(',');
-  fs.writeFile(`${fileName}.txt`, info, (err) => {
+
+  const info = Array.isArray(field) ? field.join('\n') : field.split('\n').join('\n');
+
+  fs.writeFile(`${fileName}.csv`, info, 'utf8', (err) => {
     if (err) {
       console.log('there was an error!');
     } else {
       console.log('write was successful!');
     }
-  })
-
+  });
 };
 
-const getRandomIndex = (max) => {
-  // i: number
-  // o: number, random between 0 and num
-
-  return Math.floor(Math.random() * (max + 1));
-}
+const getRandomIndex = max => Math.floor(Math.random() * (max + 1));
 
 const capitalizeFirstLetter = (word) => {
   // i: string, word
@@ -33,7 +30,7 @@ const capitalizeFirstLetter = (word) => {
   let remainder = word.slice(1);
 
   return first.toUpperCase() + remainder;
-}
+};
 
 const generateExperience = () => {
   // i: nothing
@@ -56,6 +53,9 @@ const generateExperience = () => {
   return result;
 };
 
-generateData(data.hostNames, 'host-names');
+const generateFakeNames = () => Array(100).fill('').map(faker.name.firstName);
+const generateFakeAddress = () => Array(100).fill('').map(faker.address.city);
+
+generateData(generateFakeNames(), 'host-names');
 generateData(data.cities, 'cities');
 generateData(generateExperience(), 'listing-name');

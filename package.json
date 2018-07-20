@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --config webpack.config.js --mode production",
     "start": "nodemon server/server.js",
-    "lint": 
+    "lint": ""
   },
   "repository": {
     "type": "git",
@@ -36,6 +36,7 @@
     "eslint-plugin-import": "^2.13.0",
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-react": "^7.10.0",
+    "faker": "^4.1.0",
     "webpack": "^4.16.1",
     "webpack-cli": "^3.0.8"
   },
