@@ -1,103 +1,103 @@
-const hostNames = `Derrick	Washington
-Leo	Nash
-Clinton	Hammond
-Earl	Moody
-Danny	Farmer
-Alfonso	Norman
-Delbert	Hayes
-Van	Cruz
-Victor	Patrick
-Sean	Riley
-Rogelio	Harper
-Darrell	Massey
-Spencer	Ramos
-Stewart	Duncan
-Joe	Vargas
-Vincent	Bradley
-Arturo	Torres
-Hubert	Thomas
-Sergio	Vaughn
-Damon	Green
-Micheal	Dennis
-Nathan	Moran
-Ben	Zimmerman
-Jackie	Hardy
-Abraham	Carr
-Arnold	Simon
-Ricky	Hunter
-Clint	Knight
-Hugo	Kim
-Billy	Day
-Myron	Gilbert
-Laurence	Franklin
-Allan	Little
-Luke	Mcguire
-Rufus	Butler
-Jody	Guzman
-Edmund	Webster
-Frankie	Baldwin
-Jason	Harrison
-Percy	Glover
-Julian	Ryan
-Jean	Morales
-Cory	Harrington
-Kent	Townsend
-Otis	Leonard
-Julius	Joseph
-Benjamin	Mendoza
-Ramon	Payne
-Kenny	Nunez
-Joseph	Blair
-Nathaniel	Mathis
-Kenneth	Hopkins
-Ralph	Henry
-Woodrow	Fowler
-Andres	Kelley
-Orlando	Summers
-Morris	Reynolds
-Sylvester	Greene
-Saul	Parks
-Terence	Pena
-Terrell	Norton
-Philip	Wheeler
-Conrad	Robbins
-Israel	Gill
-Erick	Hudson
-Darryl	Cortez
-Cornelius	Gregory
-Warren	Delgado
-Drew	Quinn
-Neal	Barnett
-Ted	Hampton
-Marcos	Ramsey
-Troy	Guerrero
-Marcus	Cooper
-Benny	Potter
-Cesar	Arnold
-Dean	Craig
-Jose	Stewart
-Pat	Carpenter
-Todd	Wolfe
-Clifton	Diaz
-Doug	Kennedy
-Edwin	Young
-Steve	Hughes
-Ray	Wright
-Dominick	Porter
-Casey	Gutierrez
-Elias	Matthews
-Boyd	Mckenzie
-Dennis	Marsh
-Glenn	Peterson
-Jerald	Burgess
-Aaron	Haynes
-Armando	Walton
-Pablo	Johnston
-Shaun	Baker
-Shawn	Lee
-Wilson	Swanson
-Gary	Phillips
-Kurt	Sandoval`;
+const hostNames = `Derrick Washington
+Leo Nash
+Clinton Hammond
+Earl Moody
+Danny Farmer
+Alfonso Norman
+Delbert Hayes
+Van Cruz
+Victor Patrick
+Sean Riley
+Rogelio Harper
+Darrell Massey
+Spencer Ramos
+Stewart Duncan
+Joe Vargas
+Vincent Bradley
+Arturo Torres
+Hubert Thomas
+Sergio Vaughn
+Damon Green
+Micheal Dennis
+Nathan Moran
+Ben Zimmerman
+Jackie Hardy
+Abraham Carr
+Arnold Simon
+Ricky Hunter
+Clint Knight
+Hugo Kim
+Billy Day
+Myron Gilbert
+Laurence Franklin
+Allan Little
+Luke Mcguire
+Rufus Butler
+Jody Guzman
+Edmund Webster
+Frankie Baldwin
+Jason Harrison
+Percy Glover
+Julian Ryan
+Jean Morales
+Cory Harrington
+Kent Townsend
+Otis Leonard
+Julius Joseph
+Benjamin Mendoza
+Ramon Payne
+Kenny Nunez
+Joseph Blair
+Nathaniel Mathis
+Kenneth Hopkins
+Ralph Henry
+Woodrow Fowler
+Andres Kelley
+Orlando Summers
+Morris Reynolds
+Sylvester Greene
+Saul Parks
+Terence Pena
+Terrell Norton
+Philip Wheeler
+Conrad Robbins
+Israel Gill
+Erick Hudson
+Darryl Cortez
+Cornelius Gregory
+Warren Delgado
+Drew Quinn
+Neal Barnett
+Ted Hampton
+Marcos Ramsey
+Troy Guerrero
+Marcus Cooper
+Benny Potter
+Cesar Arnold
+Dean Craig
+Jose Stewart
+Pat Carpenter
+Todd Wolfe
+Clifton Diaz
+Doug Kennedy
+Edwin Young
+Steve Hughes
+Ray Wright
+Dominick Porter
+Casey Gutierrez
+Elias Matthews
+Boyd Mckenzie
+Dennis Marsh
+Glenn Peterson
+Jerald Burgess
+Aaron Haynes
+Armando Walton
+Pablo Johnston
+Shaun Baker
+Shawn Lee
+Wilson Swanson
+Gary Phillips
+Kurt Sandoval`;
 
 const cities = `Homer, Colorado
 Boiling Point, Texas
@@ -191,7 +191,7 @@ local
 house
 experience
 destination
-vacation
+vacation home
 cabin
 sight
 house
@@ -200,8 +200,8 @@ opportunity
 `;
 
 module.exports = {
-  hostNames: hostNames,
-  cities: cities,
-  adjectives: adjectives,
-  nouns: nouns
-}
+  hostNames,
+  cities,
+  adjectives,
+  nouns,
+};
