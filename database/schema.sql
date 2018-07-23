@@ -1,12 +1,12 @@
-CREATE DATABASE IF NOT EXISTS list_body;
+CREATE DATABASE IF NOT EXISTS listing_body;
 
-USE list_body;
+USE listing_body;
 
 CREATE TABLE `listing` (
   `id` INT NOT NULL AUTO_INCREMENT,
-  `license` INT,
   `name` VARCHAR(40),
   `city` VARCHAR(30),
+  `state` VARCHAR(30),
   `host_name` VARCHAR(40),
   `guests` INT,
   `beds` INT,
@@ -30,8 +30,8 @@ CREATE TABLE `house_rules` (
   `smoking` BOOLEAN,
   `pets` BOOLEAN, 
   `events` BOOLEAN, 
-  `check_in` DATE, 
-  `check_out` DATE, 
+  `check_in` INT, 
+  `check_out` INT, 
   `custom_message` VARCHAR(150),
   `stair_access` BOOLEAN, 
   `security_deposit` INT,
@@ -64,7 +64,7 @@ CREATE TABLE `basic` (
 
 CREATE TABLE `facilities` (
   `id` INT NOT NULL AUTO_INCREMENT,
-  `parking` VARCHAR(50),
+  `parking` BOOLEAN,
   `elevator` BOOLEAN,
   `hot_tub` BOOLEAN,
   PRIMARY KEY (`id`)
@@ -108,3 +108,53 @@ ALTER TABLE `amenities` ADD FOREIGN KEY (`guest_access`) REFERENCES `guest_acces
 ALTER TABLE `amenities` ADD FOREIGN KEY (`dining`) REFERENCES `dining`(`id`);
 ALTER TABLE `amenities` ADD FOREIGN KEY (`bed_and_bath`) REFERENCES `bed_and_bath`(`id`);
 ALTER TABLE `amenities` ADD FOREIGN KEY (`safety_features`) REFERENCES `safety_features`(`id`);
+
+LOAD DATA LOCAL INFILE './data/listing.csv'
+INTO TABLE listing
+FIELDS TERMINATED BY ','
+LINES TERMINATED BY '\n';
+
+LOAD DATA LOCAL INFILE './data/home-highlights.csv'
+INTO TABLE home_highlights
+FIELDS TERMINATED BY ','
+LINES TERMINATED BY '\n';
+
+LOAD DATA LOCAL INFILE './data/house-rules.csv'
+INTO TABLE house_rules
+FIELDS TERMINATED BY ','
+LINES TERMINATED BY '\n';
+
+LOAD DATA LOCAL INFILE './data/amenities.csv'
+INTO TABLE amenities
+FIELDS TERMINATED BY ','
+LINES TERMINATED BY '\n';
+
+LOAD DATA LOCAL INFILE './data/basic.csv'
+INTO TABLE basic
+FIELDS TERMINATED BY ','
+LINES TERMINATED BY '\n';
+
+LOAD DATA LOCAL INFILE './data/facilities.csv'
+INTO TABLE facilities
+FIELDS TERMINATED BY ','
+LINES TERMINATED BY '\n';
+
+LOAD DATA LOCAL INFILE './data/guest_access.csv'
+INTO TABLE guest_access
+FIELDS TERMINATED BY ','
+LINES TERMINATED BY '\n';
+
+LOAD DATA LOCAL INFILE './data/dining.csv'
+INTO TABLE dining
+FIELDS TERMINATED BY ','
+LINES TERMINATED BY '\n';
+
+LOAD DATA LOCAL INFILE './data/bed-and-bath.csv'
+INTO TABLE bed_and_bath
+FIELDS TERMINATED BY ','
+LINES TERMINATED BY '\n';
+
+LOAD DATA LOCAL INFILE './data/safety-features.csv'
+INTO TABLE safety_features
+FIELDS TERMINATED BY ','
+LINES TERMINATED BY '\n';
