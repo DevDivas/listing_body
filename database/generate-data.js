@@ -44,17 +44,42 @@ const generateHomeHighlights = () => {
   const results = [];
 
   for (let i = 0; i <= 100; i += 1) {
-    const adjective = capitalizeFirstLetter(data.adjectives.split('\n')[getRandomIndex(32)]);
-    const noun = capitalizeFirstLetter(data.nouns.split('\n')[getRandomIndex(12)]);
+    // const adjective1 = capitalizeFirstLetter(data.adjectives.split('\n')[getRandomIndex(32)]);
+    // const adjective2 = capitalizeFirstLetter(data.adjectives.split('\n')[getRandomIndex(32)]);
+    // const adjective3 = capitalizeFirstLetter(data.adjectives.split('\n')[getRandomIndex(32)]);
+    // const noun1 = capitalizeFirstLetter(data.nouns.split('\n')[getRandomIndex(12)]);
+    // const noun2 = capitalizeFirstLetter(data.nouns.split('\n')[getRandomIndex(12)]);
+    // const noun3 = capitalizeFirstLetter(data.nouns.split('\n')[getRandomIndex(12)]);
 
-    const header = `${adjective} ${noun}`;
-    const helpful = randomBool(1);
+    let header1; 
+    let header2;
+    let header3;
+
+    let headers = ['header1', 'header2', 'header3'];
+    headers = headers.map((header) => {
+      // let adjective = capitalizeFirstLetter(data.adjectives.split('\n')[getRandomIndex(32)]);
+      // let noun = capitalizeFirstLetter(data.nouns.split('\n')[getRandomIndex(12)]);
+      // header = `${adjective} ${noun}`;
+
+      return capitalizeFirstLetter(data.adjectives.split('\n')[getRandomIndex(32)])
+      + ' ' 
+      + capitalizeFirstLetter(data.nouns.split('\n')[getRandomIndex(12)]);
+    })
+
     results.push(`${i + 1},`
       + `${i + 1},`
-      + `${header},`
+      + `${headers[0]},`
+      + `${headers[1]},`
+      + `${headers[2]},`
       + `${faker.lorem.sentence()},`
-      + `${helpful},`
-      + `${helpful > 0 ? 0 : 1}`);
+      + `${faker.lorem.sentence()},`
+      + `${faker.lorem.sentence()},`
+      + `0,`
+      + `0,`
+      + `0,`
+      + `0,`
+      + `0,`
+      + `0,`);
   }
   return results.join('\n');
 };
@@ -109,7 +134,7 @@ const generateAmenitiesTable = (num) => {
 const generateFile = (field, fileName) => {
   const info = Array.isArray(field) ? field.join('\n') : field.split('\n').join('\n');
 
-  fs.writeFile(`./data/${fileName}.csv`, info, 'utf8', (err) => {
+  fs.writeFile(`./database/data/${fileName}.csv`, info, 'utf8', (err) => {
     if (err) {
       throw Error(err);
     } else {

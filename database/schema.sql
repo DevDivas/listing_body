@@ -18,10 +18,18 @@ CREATE TABLE `listing` (
 CREATE TABLE `home_highlights` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `room_id` INT,
-  `header` VARCHAR(30),
-  `message` VARCHAR(80),
-  `helpful` BOOLEAN,
-  `not_helpful` BOOLEAN,
+  `header1` VARCHAR(30),
+  `header2` VARCHAR(30),
+  `header3` VARCHAR(30),
+  `message1` VARCHAR(80),
+  `message2` VARCHAR(80),
+  `message3` VARCHAR(80),
+  `helpful1` INT,
+  `helpful2` INT,
+  `helpful3` INT,
+  `not_helpful1` INT,
+  `not_helpful2` INT,
+  `not_helpful3` INT,  
   PRIMARY KEY (`id`)
 );
 
@@ -125,52 +133,52 @@ ALTER TABLE `dining` ADD FOREIGN KEY (`room_id`) REFERENCES `listing`(`id`);
 ALTER TABLE `bed_and_bath` ADD FOREIGN KEY (`room_id`) REFERENCES `listing`(`id`);
 ALTER TABLE `safety_features` ADD FOREIGN KEY (`room_id`) REFERENCES `listing`(`id`);
 
-LOAD DATA LOCAL INFILE './data/listing.csv'
+LOAD DATA LOCAL INFILE './database/data/listing.csv'
 INTO TABLE listing
 FIELDS TERMINATED BY ','
 LINES TERMINATED BY '\n';
 
-LOAD DATA LOCAL INFILE './data/home-highlights.csv'
+LOAD DATA LOCAL INFILE './database/data/home-highlights.csv'
 INTO TABLE home_highlights
 FIELDS TERMINATED BY ','
 LINES TERMINATED BY '\n';
 
-LOAD DATA LOCAL INFILE './data/house-rules.csv'
+LOAD DATA LOCAL INFILE './database/data/house-rules.csv'
 INTO TABLE house_rules
 FIELDS TERMINATED BY ','
 LINES TERMINATED BY '\n';
 
-LOAD DATA LOCAL INFILE './data/amenities.csv'
+LOAD DATA LOCAL INFILE './database/data/amenities.csv'
 INTO TABLE amenities
 FIELDS TERMINATED BY ','
 LINES TERMINATED BY '\n';
 
-LOAD DATA LOCAL INFILE './data/basic.csv'
+LOAD DATA LOCAL INFILE './database/data/basic.csv'
 INTO TABLE basic
 FIELDS TERMINATED BY ','
 LINES TERMINATED BY '\n';
 
-LOAD DATA LOCAL INFILE './data/facilities.csv'
+LOAD DATA LOCAL INFILE './database/data/facilities.csv'
 INTO TABLE facilities
 FIELDS TERMINATED BY ','
 LINES TERMINATED BY '\n';
 
-LOAD DATA LOCAL INFILE './data/guest-access.csv'
+LOAD DATA LOCAL INFILE './database/data/guest-access.csv'
 INTO TABLE guest_access
 FIELDS TERMINATED BY ','
 LINES TERMINATED BY '\n';
 
-LOAD DATA LOCAL INFILE './data/dining.csv'
+LOAD DATA LOCAL INFILE './database/data/dining.csv'
 INTO TABLE dining
 FIELDS TERMINATED BY ','
 LINES TERMINATED BY '\n';
 
-LOAD DATA LOCAL INFILE './data/bed-and-bath.csv'
+LOAD DATA LOCAL INFILE './database/data/bed-and-bath.csv'
 INTO TABLE bed_and_bath
 FIELDS TERMINATED BY ','
 LINES TERMINATED BY '\n';
 
-LOAD DATA LOCAL INFILE './data/safety-features.csv'
+LOAD DATA LOCAL INFILE './database/data/safety-features.csv'
 INTO TABLE safety_features
 FIELDS TERMINATED BY ','
 LINES TERMINATED BY '\n';
