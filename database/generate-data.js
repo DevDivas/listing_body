@@ -33,6 +33,7 @@ const generateListing = () => {
       + `${citiesAndStates[i][0]},`
       + `${citiesAndStates[i][1]},`
       + `${faker.name.firstName()},`
+      + `${faker.lorem.paragraph()},`
       + `${num},`
       + `${getRandomIndex(num)},`
       + `${getRandomIndex(num - 1)}`);
@@ -53,7 +54,7 @@ const generateHomeHighlights = () => {
       + `${header},`
       + `${faker.lorem.sentence()},`
       + `${helpful},`
-      + `${!helpful}`);
+      + `${helpful > 0 ? 0 : 1}`);
   }
   return results.join('\n');
 };
@@ -63,6 +64,7 @@ const generateHouseRules = () => {
 
   for (let i = 0; i <= 100; i += 1) {
     results.push(`${i + 1}
+      ${i + 1}
       ${randomBool(1)}
       ${randomBool(1)}
       ${randomBool(1)}
@@ -95,7 +97,7 @@ const generateAmenitiesTable = (num) => {
 
   for (let i = 0; i < 100; i += 1) {
     let amenityStr = `${i + 1},`;
-    for (let j = 0; j < num; j += 1) {
+    for (let j = 0; j <= num; j += 1) {
       const trail = j === num ? '\n' : ',';
       amenityStr += `${i + 1}${trail}`;
     }

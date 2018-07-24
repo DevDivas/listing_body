@@ -155,7 +155,7 @@ INTO TABLE facilities
 FIELDS TERMINATED BY ','
 LINES TERMINATED BY '\n';
 
-LOAD DATA LOCAL INFILE './data/guest_access.csv'
+LOAD DATA LOCAL INFILE './data/guest-access.csv'
 INTO TABLE guest_access
 FIELDS TERMINATED BY ','
 LINES TERMINATED BY '\n';
