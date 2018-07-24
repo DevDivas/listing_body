@@ -42,7 +42,6 @@ const generateListing = () => {
 const generateHomeHighlights = () => {
   const results = [];
 
-  
   for (let i = 0; i <= 100; i += 1) {
     const adjective = capitalizeFirstLetter(data.adjectives.split('\n')[getRandomIndex(32)]);
     const noun = capitalizeFirstLetter(data.nouns.split('\n')[getRandomIndex(12)]);
@@ -81,8 +80,8 @@ const generateAmenities = (num) => {
   let results = '';
 
   for (let i = 0; i < 100; i += 1) {
-    let amenityStr = `${i + 1},`;
-    for (let j = 0; j <= num; j += 1) {
+    let amenityStr = `${i + 1},${i + 1},`;
+    for (let j = 0; j < num; j += 1) {
       const trail = j === num ? '\n' : ',';
       amenityStr += `${randomBool()}${trail}`;
     }
@@ -117,7 +116,7 @@ const generateFile = (field, fileName) => {
   });
 };
 
-const amenities = ['basic', 'facilities', 'guest_access', 'dining', 'bed_and_bath', 'safety_features'];
+const amenities = ['basic', 'facilities', 'guest-access', 'dining', 'bed-and-bath', 'safety-features'];
 const catNums = [7, 3, 2, 1, 5, 3];
 
 amenities.forEach((amenity, i) => {
@@ -128,11 +127,3 @@ generateFile(generateListing(), 'listing');
 generateFile(generateHomeHighlights(), 'home-highlights');
 generateFile(generateHouseRules(), 'house-rules');
 generateFile(generateAmenitiesTable(7), 'amenities');
-
-// const generateFakeNames = () => Array(100).fill('').map(faker.name.firstName);
-
-// generateData(generateFakeNames(), 'host-names');
-// generateData(data.cities, 'cities');
-// generateData(generateExperience(), 'listing-name');
-
-// console.log(generateListing());
