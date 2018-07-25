@@ -4,10 +4,9 @@
   "description": "",
   "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --detectOpenHandles --watch",
     "build": "webpack --config webpack.config.js --mode production",
-    "start": "nodemon server/server.js",
-    "lint": ""
+    "start": "nodemon server/server.js"
   },
   "repository": {
     "type": "git",
@@ -26,16 +25,22 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
+    "babel-jest": "^23.4.0",
     "babel-loader": "^7.1.5",
     "babel-preset-airbnb": "^2.5.2",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
     "eslint": "^5.1.0",
     "eslint-config-airbnb": "^17.0.0",
     "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor",
     "eslint-plugin-import": "^2.13.0",
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-react": "^7.10.0",
+    "jest": "^23.4.1",
+    "jest-enzyme": "^6.0.2",
+    "react-test-renderer": "^16.4.1",
     "webpack": "^4.16.1",
     "webpack-cli": "^3.0.8"
   },
@@ -45,5 +50,13 @@
     "mysql": "^2.16.0",
     "react": "^16.4.1",
     "react-dom": "^16.4.1"
+  },
+  "jest": {
+    "setupTestFrameworkScriptFile": "jest-enzyme",
+    "testEnvironment": "enzyme",
+    "testEnvironmentOptions": {
+      "enzymeAdapter": "react16"
+    },
+    "moduleFileExtensions": ["js", "json", "jsx"]
   }
 }
