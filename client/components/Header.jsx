@@ -6,16 +6,16 @@ const Header = (props) => (
       ENTIRE HOUSE  
     </div>
     <div className="listing-name">
-      Listing Name
+      {props.listingName}
     </div>
     <div className="city">
-      City
+      {props.city}
     </div>
     <div className="host-image">
-      host-image
+      <img src={props.hostImage} />
     </div>
     <div className="host-name">
-      host-name
+      {props.hostName}
     </div>
     <div className="guests" data-guests={props.guests}>
       {props.guests} guests
