@@ -1,2 +1,8 @@
 .DS_Store
 node_modules
+example
+database/data
+database/data.js
+database/generate-data.js
+public/bundle.js
+public/bundle.js.map
