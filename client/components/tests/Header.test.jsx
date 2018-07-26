@@ -1,7 +1,7 @@
 import React from 'react';
-import {shallow, mount, render} from 'enzyme';
-import Header from '../Header.jsx';
-import { prependOnceListener } from 'cluster';
+import { shallow } from 'enzyme';
+
+import Header from '../Header';
 
 describe('Header', () => {
   const numberOfGuests = Math.floor(Math.random() * (6 - 1)) + 1;
@@ -12,12 +12,12 @@ describe('Header', () => {
   const city = 'Bearcreek';
   const hostName = 'Elizabeth';
 
-  const wrapper = shallow(<Header 
+  const wrapper = shallow(<Header
     listingName={listingName}
     city={city}
     hostName={hostName}
-    guests={numberOfGuests} 
-    beds={numberOfBeds} 
+    guests={numberOfGuests}
+    beds={numberOfBeds}
     baths={numberOfBaths}
   />);
 
@@ -27,7 +27,7 @@ describe('Header', () => {
 
   it('should have a housing type', () => {
     expect(wrapper.find('.listing-type').text()).toBe('ENTIRE HOUSE');
-  })
+  });
 
   it('should have a listing name', () => {
     expect(wrapper.find('.listing-name').text()).toBe(listingName);
@@ -38,7 +38,7 @@ describe('Header', () => {
   });
 
   it('should have a host image', () => {
-    expect(wrapper.find('.host-image').contains(<img />)).toBeTruthy();
+    expect(wrapper.find('.host-image')).toHaveLength(1);
   });
 
   it('should have the host\'s name', () => {
