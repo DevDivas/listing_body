@@ -33,7 +33,7 @@
     "babel-preset-react": "^6.24.1",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
-    "eslint": "^5.1.0",
+    "eslint": "^4.19.1",
     "eslint-config-airbnb": "^17.0.0",
     "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor",
     "eslint-plugin-import": "^2.13.0",
@@ -47,9 +47,11 @@
     "webpack-cli": "^3.0.8"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "express": "^4.16.3",
     "faker": "^4.1.0",
     "mysql": "^2.16.0",
+    "prop-types": "^15.6.2",
     "react": "^16.4.1",
     "react-dom": "^16.4.1"
   },
@@ -59,6 +61,10 @@
     "testEnvironmentOptions": {
       "enzymeAdapter": "react16"
     },
-    "moduleFileExtensions": ["js", "json", "jsx"]
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "jsx"
+    ]
   }
 }
