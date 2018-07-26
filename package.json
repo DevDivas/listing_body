@@ -6,7 +6,8 @@
   "scripts": {
     "test": "jest --detectOpenHandles --watch",
     "build": "webpack --config webpack.config.js --mode production",
-    "start": "nodemon server/server.js"
+    "start": "nodemon server/app.js",
+    "lint": "eslint"
   },
   "repository": {
     "type": "git",
@@ -41,6 +42,7 @@
     "jest": "^23.4.1",
     "jest-enzyme": "^6.0.2",
     "react-test-renderer": "^16.4.1",
+    "supertest": "^3.1.0",
     "webpack": "^4.16.1",
     "webpack-cli": "^3.0.8"
   },
@@ -57,6 +59,10 @@
     "testEnvironmentOptions": {
       "enzymeAdapter": "react16"
     },
-    "moduleFileExtensions": ["js", "json", "jsx"]
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "jsx"
+    ]
   }
 }
