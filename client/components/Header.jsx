@@ -1,30 +1,30 @@
 import React from 'react';
 
-const Header = (props) => (
+const Header = ({ listingName, city, hostImage, hostName, guests, beds, baths }) => (
   <div className="header">
     <div className="listing-type">
-      ENTIRE HOUSE  
+      ENTIRE HOUSE
     </div>
     <div className="listing-name">
-      {props.listingName}
+      {listingName}
     </div>
     <div className="city">
-      {props.city}
+      {city}
     </div>
     <div className="host-image">
-      <img src={props.hostImage} />
+      <img alt="host" src={hostImage} />
     </div>
     <div className="host-name">
-      {props.hostName}
+      {hostName}
     </div>
-    <div className="guests" data-guests={props.guests}>
-      {props.guests} guests
+    <div className="guests" data-guests={guests}>
+      {guests} guests
     </div>
-    <div className="beds" data-beds={props.beds}>
-      {props.beds} beds
+    <div className="beds" data-beds={beds}>
+      {beds} beds
     </div>
-    <div className="baths" data-baths={props.baths}>
-      {props.baths} beds
+    <div className="baths" data-baths={baths}>
+      {baths} beds
     </div>
     Header
   </div>
