@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest --detectOpenHandles --watch",
     "build": "webpack --config webpack.config.js --mode production",
-    "start": "nodemon server/app.js",
+    "start": "nodemon server/server.js",
     "lint": "eslint"
   },
   "repository": {
@@ -59,10 +59,6 @@
     "testEnvironmentOptions": {
       "enzymeAdapter": "react16"
     },
-    "moduleFileExtensions": [
-      "js",
-      "json",
-      "jsx"
-    ]
+    "moduleFileExtensions": ["js", "json", "jsx"]
   }
 }
