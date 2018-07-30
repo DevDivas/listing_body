@@ -4,37 +4,30 @@ import { shallow } from 'enzyme';
 import Header from '../Header';
 
 describe('Header', () => {
-  const numberOfGuests = Math.floor(Math.random() * (6 - 1)) + 1;
-  const numberOfBeds = Math.floor(Math.random() * (6 - 1)) + 1;
-  const numberOfBaths = Math.floor(Math.random() * (6 - 1)) + 1;
-
-  const listingName = 'Stimulating Happy Destination';
-  const city = 'Bearcreek';
-  const hostName = 'Elizabeth';
-
-  const wrapper = shallow(<Header
-    listingName={listingName}
-    city={city}
-    hostName={hostName}
-    guests={numberOfGuests}
-    beds={numberOfBeds}
-    baths={numberOfBaths}
-  />);
+  const listing = {
+    name: 'Stimulating Happy Destination',
+    city: 'Bearcreek',
+    host_name: 'Elizabeth',
+    guests: 4,
+    beds: 2,
+    baths: 1,
+  };
+  const wrapper = shallow(<Header listing={listing} />);
 
   it('should exist', () => {
     expect(wrapper.exists()).toBeTruthy();
   });
 
   it('should have a housing type', () => {
-    expect(wrapper.find('.listing-type').text()).toBe('ENTIRE HOUSE');
+    expect(wrapper.find('.title-content').text()).toBe('ENTIRE HOUSE');
   });
 
   it('should have a listing name', () => {
-    expect(wrapper.find('.listing-name').text()).toBe(listingName);
+    expect(wrapper.find('.listing-name').text()).toBe(listing.name);
   });
 
   it('should have a city', () => {
-    expect(wrapper.find('.city').text()).toBe(city);
+    expect(wrapper.find('.city').text()).toBe(listing.city);
   });
 
   it('should have a host image', () => {
@@ -42,18 +35,18 @@ describe('Header', () => {
   });
 
   it('should have the host\'s name', () => {
-    expect(wrapper.find('.host-name').text()).toBe(hostName);
+    expect(wrapper.find('.host-name').text()).toBe(listing.host_name);
   });
 
   it('should have number of guests greater than zero', () => {
-    expect(wrapper.find(`.guests[data-guests=${numberOfGuests}]`)).toHaveLength(1);
+    expect(wrapper.find(`.guests[data-guests=${listing.guests}]`)).toHaveLength(1);
   });
 
   it('should have number of beds greater than zero', () => {
-    expect(wrapper.find(`.beds[data-beds=${numberOfBeds}]`)).toHaveLength(1);
+    expect(wrapper.find(`.beds[data-beds=${listing.beds}]`)).toHaveLength(1);
   });
 
   it('should have number of baths greater than zero', () => {
-    expect(wrapper.find(`.baths[data-baths=${numberOfBaths}]`)).toHaveLength(1);
+    expect(wrapper.find(`.baths[data-baths=${listing.baths}]`)).toHaveLength(1);
   });
 });
