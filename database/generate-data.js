@@ -32,8 +32,9 @@ const generateListing = () => {
       + `${experience[i]},`
       + `${citiesAndStates[i][0]},`
       + `${citiesAndStates[i][1]},`
+      + `https://s3-us-west-1.amazonaws.com/listing-body-component/${getRandomIndex(24)}.jpg,`
       + `${faker.name.firstName()},`
-      + `${faker.lorem.paragraph()},`
+      + `${data.lipsum.split(',').join('/').split('\n').join('|')},`
       + `${num},`
       + `${getRandomIndex(num)},`
       + `${getRandomIndex(num - 1)}`);
@@ -44,30 +45,16 @@ const generateHomeHighlights = () => {
   const results = [];
 
   for (let i = 0; i <= 100; i += 1) {
-    // const adjective1 = capitalizeFirstLetter(data.adjectives.split('\n')[getRandomIndex(32)]);
-    // const adjective2 = capitalizeFirstLetter(data.adjectives.split('\n')[getRandomIndex(32)]);
-    // const adjective3 = capitalizeFirstLetter(data.adjectives.split('\n')[getRandomIndex(32)]);
-    // const noun1 = capitalizeFirstLetter(data.nouns.split('\n')[getRandomIndex(12)]);
-    // const noun2 = capitalizeFirstLetter(data.nouns.split('\n')[getRandomIndex(12)]);
-    // const noun3 = capitalizeFirstLetter(data.nouns.split('\n')[getRandomIndex(12)]);
-
-    let header1; 
-    let header2;
-    let header3;
 
     let headers = ['header1', 'header2', 'header3'];
     headers = headers.map((header) => {
-      // let adjective = capitalizeFirstLetter(data.adjectives.split('\n')[getRandomIndex(32)]);
-      // let noun = capitalizeFirstLetter(data.nouns.split('\n')[getRandomIndex(12)]);
-      // header = `${adjective} ${noun}`;
 
       return capitalizeFirstLetter(data.adjectives.split('\n')[getRandomIndex(32)])
       + ' ' 
       + capitalizeFirstLetter(data.nouns.split('\n')[getRandomIndex(12)]);
-    })
+    });
 
     results.push(`${i + 1},`
-      + `${i + 1},`
       + `${headers[0]},`
       + `${headers[1]},`
       + `${headers[2]},`
@@ -89,7 +76,6 @@ const generateHouseRules = () => {
 
   for (let i = 0; i <= 100; i += 1) {
     results.push(`${i + 1}
-      ${i + 1}
       ${randomBool(1)}
       ${randomBool(1)}
       ${randomBool(1)}
@@ -107,7 +93,7 @@ const generateAmenities = (num) => {
   let results = '';
 
   for (let i = 0; i < 100; i += 1) {
-    let amenityStr = `${i + 1},${i + 1},`;
+    let amenityStr = `${i + 1},`;
     for (let j = 0; j < num; j += 1) {
       const trail = j === num ? '\n' : ',';
       amenityStr += `${randomBool()}${trail}`;
