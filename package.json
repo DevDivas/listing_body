@@ -31,6 +31,7 @@
     "babel-preset-airbnb": "^2.5.2",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
+    "css-loader": "^1.0.0",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "eslint": "^4.19.1",
@@ -42,12 +43,14 @@
     "jest": "^23.4.1",
     "jest-enzyme": "^6.0.2",
     "react-test-renderer": "^16.4.1",
+    "style-loader": "^0.21.0",
     "supertest": "^3.1.0",
     "webpack": "^4.16.1",
     "webpack-cli": "^3.0.8"
   },
   "dependencies": {
     "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
     "express": "^4.16.3",
     "faker": "^4.1.0",
     "mysql": "^2.16.0",
