@@ -7,6 +7,7 @@ CREATE TABLE `listing` (
   `name` VARCHAR(40),
   `city` VARCHAR(30),
   `state` VARCHAR(30),
+  host_image VARCHAR(70),
   `host_name` VARCHAR(40),
   `description` VARCHAR(2000),
   `guests` INT,
@@ -64,7 +65,7 @@ CREATE TABLE `basic` (
   `dryer` BOOLEAN,
   `laptop_friendly_workspace` BOOLEAN,
   `tv` BOOLEAN,
-  `air conditioning` BOOLEAN,
+  `air_conditioning` BOOLEAN,
   `essentials` BOOLEAN,
   PRIMARY KEY (`id`)
 );
