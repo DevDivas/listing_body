@@ -1,30 +1,37 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import AmenitiesCategory from './AmenitiesCategory';
+const Amenities = ({ amenities, toggleModal }) => (
+  <div className="amenities">
+    <div className="amenities-preview">
+      {Object.keys(amenities).map(
+        category => (
+          <div>
+            <img className="amenity-icon" src={`https://s3-us-west-1.amazonaws.com/listing-body-component/amenities/${category.split(' ').join('-').toLowerCase()}.png`} alt="amenity icon" />
+            {category}
+          </div>
+        ),
+      )}
+    </div>
 
-const Amenities = ({ amenities }) => (
-  <div className="Amenities">
-    {amenities.map(
-      category => <AmenitiesCategory categoryName={category[0]} category={category[1]} />,
-    )}
+    <div className="amenities-show-more bold">
+      <div role="button" tabIndex="0" className="read-more" onClick={() => { toggleModal(); }} onKeyPress={() => { toggleModal(); }}>
+        {`Show all ${Object.keys(amenities).reduce((accum, current) => Object.keys(current).length, 0)} amenities`}
+      </div>
+    </div>
+
+    <div className="divider" />
   </div>
 );
 
 Amenities.propTypes = {
-  amenities: PropTypes.array,
-  // amenities: PropTypes.array({
-  //   basic: PropTypes.object,
-  //   facilities: PropTypes.object,
-  //   guest_access: PropTypes.object,
-  //   dining: PropTypes.object,
-  //   bed_and_bath: PropTypes.object,
-  //   safety_features: PropTypes.object
-  // })
+  amenities: PropTypes.object,
+  toggleModal: PropTypes.func,
 };
 
 Amenities.defaultProps = {
-  amenities: [],
+  amenities: {},
+  toggleModal: () => {},
 };
 
 export default Amenities;
