@@ -18,6 +18,13 @@ const LOADERS = {
         presets: ['env', 'react', 'airbnb'],
       },
     },
+    {
+      test: /\.css$/,
+      use: [
+        { loader: 'style-loader' },
+        { loader: 'css-loader' },
+      ],
+    },
   ],
 };
 
