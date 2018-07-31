@@ -1,9 +1,21 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import apiKey from '../../server/apiKey';
 
 const Location = ({ city, state }) => (
-  <div>
-    <iframe title="location" width="600" height="450" frameBorder="0" src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyC4HWaF2XfAfrWP5RYCC1qT6su7D0dZQ6Y&q=${city}+${state}`} allowFullScreen />
+  <div id="location">
+    <iframe title="location" width="600" height="450" frameBorder="0" src={`https://www.google.com/maps/embed/v1/place?key=${apiKey}&q=${city}+${state}`} allowFullScreen />
   </div>
 );
+
+Location.propTypes = {
+  city: PropTypes.string,
+  state: PropTypes.string,
+};
+
+Location.defaultProps = {
+  city: 'Detroit',
+  state: 'Michigan',
+};
 
 export default Location;
