@@ -1,4 +1,8 @@
-CREATE DATABASE IF NOT EXISTS listing_body;
+DROP DATABASE IF EXISTS listing_body;
+
+CREATE DATABASE listing_body;
+
+SET GLOBAL local_infile = 'ON';
 
 USE listing_body;
 
