@@ -14,8 +14,11 @@ module.exports = {
   },
   modulePathIgnorePatterns: [
     '<rootDir>/node_modules/',
+    '<rootDir>/package-lock.json',
+    '<rootDir>/jest.config.js',
     '<rootDir>/coverage/',
     '<rootDir>/webpack.config.js',
     '<rootDir>/database/data_generation',
+    '<rootDir>/keys/',
   ],
 };

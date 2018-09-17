@@ -57,14 +57,13 @@ class App extends Component {
       .then((res) => {
         const { data } = res;
         this.setState({
-          amenities: utility.formatAmenities(utility.collectAmenities(data)),
+          amenities: utility.formatAmenities(data),
         });
       });
 
     axios.get(`/rooms/${roomId}/listingInfo`)
       .then((res) => {
         const { data } = res;
-        console.log(data);
         this.setState({
           listing: data,
           description: data.description.split('||').join('\n').split('/').join(','),
