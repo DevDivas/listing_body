@@ -8,107 +8,136 @@ Aliquam erat volutpat. Donec vel purus vel turpis malesuada posuere in ac orci. 
 
 Donec ut magna pellentesque, pellentesque lacus at, suscipit nunc. Pellentesque pellentesque, mi ut faucibus lacinia, risus elit convallis quam, sit amet elementum justo eros sed justo. Etiam lobortis enim suscipit blandit iaculis. In hac habitasse platea dictumst. Sed placerat vehicula felis, ut sodales felis dignissim vitae. Suspendisse potenti. Vestibulum volutpat porta lectus, in posuere leo eleifend at. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in massa ultrices, pretium mauris sed, faucibus lacus. Curabitur tincidunt tortor enim, sed semper massa egestas sed. Fusce suscipit vitae ex a fringilla. Integer finibus est lobortis lectus mattis, laoreet posuere purus fringilla. Suspendisse turpis leo, consequat quis aliquam sit amet, lacinia quis dui.`;
 
-const cities = `Homer, Colorado
-Boiling Point, Texas
-Coffee, Maine
-Dollar Point, Rhode Island
-Shisholop, Oklahoma
-Whiskey Spring, California
-Burnt Woods, Colorado
-Breidablick, Delaware
-Sammamish, Oregon
-Steamboat Springs, Arizona
-Thistledown, Arizona
-Wildcat, Nebraska
-Cape Horn, District of Columbia
-Bearcreek, Massachusetts
-Deep Tunnel, Kentucky
-Christmas City, Ohio
-Koosharem, Arizona
-Bright Star, District of Columbia
-Bald Knob, California
-Figure Five, Georgia
-Frisbee, Connecticut
-Possum Grape, Missouri
-Rocky Comfort, Maryland
-Thrasher, Ohio
-Bone Gap, Colorado
-Kankakee, Colorado
-Cricket, Massachusetts
-Neon, Tennessee
-China, Delaware
-Blackhoof, Georgia
-Eden Prairie, Ohio
-New Munich, Missouri
-Poor Farm Landing, Oklahoma
-Improve, District of Columbia
-Six Towns, West Virginia
-Ko Ko, South Carolina
-Tuckaleechee, Louisiana
-Ben Arnold, Indiana
-Guys Store, West Virginia
-Notrees, Montana
-Sempronius, Alabama
-Eau Claire, Minnesota
-Little Heaven, Missouri
-Ohoopee, Washington
-Mauzy, Mississippi
-Mashpee, California
-Hopatcong, Kansas
-Notrees, Montana
-Honolulu, Maryland
-Overshot, New York
-Put-in-Bay, Alabama
-Homer, Colorado
-Boiling Point, Texas
-Coffee, Maine
-Dollar Point, Rhode Island
-Shisholop, Oklahoma
-Whiskey Spring, California
-Burnt Woods, Colorado
-Breidablick, Delaware
-Sammamish, Oregon
-Steamboat Springs, Arizona
-Thistledown, Arizona
-Wildcat, Nebraska
-Cape Horn, District of Columbia
-Bearcreek, Massachusetts
-Deep Tunnel, Kentucky
-Christmas City, Ohio
-Koosharem, Arizona
-Bright Star, District of Columbia
-Bald Knob, California
-Figure Five, Georgia
-Frisbee, Connecticut
-Possum Grape, Missouri
-Rocky Comfort, Maryland
-Thrasher, Ohio
-Bone Gap, Colorado
-Kankakee, Colorado
-Cricket, Massachusetts
-Neon, Tennessee
-China, Delaware
-Blackhoof, Georgia
-Eden Prairie, Ohio
-New Munich, Missouri
-Poor Farm Landing, Oklahoma
-Improve, District of Columbia
-Six Towns, West Virginia
-Ko Ko, South Carolina
-Tuckaleechee, Louisiana
-Ben Arnold, Indiana
-Guys Store, West Virginia
-Notrees, Montana
-Sempronius, Alabama
-Eau Claire, Minnesota
-Little Heaven, Missouri
-Ohoopee, Washington
-Mauzy, Mississippi
-Mashpee, California
-Hopatcong, Kansas
-Honolulu, Maryland
-Overshot, New York
-Put-in-Bay, Alabama`;
+const cities = `Warner,NH
+Detroit,MI
+San Diego,CA
+Chicago,IL
+New York,NY
+Farmington Hills,MI
+San Francisco,CA
+Oakland,CA
+Berkeley,CA
+Palo Alto,CA
+San Jose,CA
+Westland,MI
+Ann Arbor,MI
+Hamtramck,MI
+Ypsilanti,MI
+Canton,MI
+Sterling Heights,MI
+Canton,MI
+Dearborn,MI
+Southfield,MI
+Novi,MI
+Birmingham,MI
+Warren,MI
+Troy,MI
+Ferndale,MI
+Pontiac,MI
+Warner,NH
+Detroit,MI
+San Diego,CA
+Chicago,IL
+New York,NY
+Farmington Hills,MI
+San Francisco,CA
+Oakland,CA
+Berkeley,CA
+Palo Alto,CA
+San Jose,CA
+Westland,MI
+Ann Arbor,MI
+Hamtramck,MI
+Ypsilanti,MI
+Canton,MI
+Sterling Heights,MI
+Canton,MI
+Dearborn,MI
+Southfield,MI
+Novi,MI
+Birmingham,MI
+Warren,MI
+Troy,MI
+Ferndale,MI
+Pontiac,MI
+Warner,NH
+Detroit,MI
+San Diego,CA
+Chicago,IL
+New York,NY
+Farmington Hills,MI
+San Francisco,CA
+Oakland,CA
+Berkeley,CA
+Palo Alto,CA
+San Jose,CA
+Westland,MI
+Ann Arbor,MI
+Hamtramck,MI
+Ypsilanti,MI
+Canton,MI
+Sterling Heights,MI
+Canton,MI
+Dearborn,MI
+Southfield,MI
+Novi,MI
+Birmingham,MI
+Warren,MI
+Troy,MI
+Ferndale,MI
+Pontiac,MI
+Warner,NH
+Detroit,MI
+San Diego,CA
+Chicago,IL
+New York,NY
+Farmington Hills,MI
+San Francisco,CA
+Oakland,CA
+Berkeley,CA
+Palo Alto,CA
+San Jose,CA
+Westland,MI
+Ann Arbor,MI
+Hamtramck,MI
+Ypsilanti,MI
+Canton,MI
+Sterling Heights,MI
+Canton,MI
+Dearborn,MI
+Southfield,MI
+Novi,MI
+Birmingham,MI
+Warren,MI
+Troy,MI
+Ferndale,MI
+Pontiac,MI
+Warner,NH
+Detroit,MI
+San Diego,CA
+Chicago,IL
+New York,NY
+Farmington Hills,MI
+San Francisco,CA
+Oakland,CA
+Berkeley,CA
+Palo Alto,CA
+San Jose,CA
+Westland,MI
+Ann Arbor,MI
+Hamtramck,MI
+Ypsilanti,MI
+Canton,MI
+Sterling Heights,MI
+Canton,MI
+Dearborn,MI
+Southfield,MI
+Novi,MI
+Birmingham,MI
+Warren,MI
+Troy,MI
+Ferndale,MI
+Pontiac,MI`;
 
 const adjectives = `marvelous
 therapeutic
