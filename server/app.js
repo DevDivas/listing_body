@@ -16,7 +16,10 @@ app.get('/rooms/:roomId/x', (req, res) => {
 
   tables.forEach((table) => {
     connection.query(`SELECT * FROM ${table} WHERE id IN (${room});`, (err, rows) => {
-      if (err) throw Error(err);
+      if (err) {
+        console.log(err);
+        // throw Error(err);
+      }
 
       response[table] = JSON.parse(JSON.stringify(rows[0]));
       if (Object.keys(response).length === tables.length) {
