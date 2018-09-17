@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest --detectOpenHandles --watch --coverage",
     "build": "webpack --config webpack.config.js --mode development --watch",
-    "start": "nodemon server/server.js",
+    "start": "nodemon server/startServer.js",
     "seed": "node database/generate-data.js | mysql --local-infile -u root -p < database/schema.sql"
   },
   "repository": {
