@@ -10,7 +10,6 @@ import HouseRules from './HouseRules';
 import Location from './Location';
 
 import utility from '../clientHelpers';
-
 import styles from '../../public/styles/app.css';
 
 const axios = require('axios');
@@ -38,16 +37,37 @@ class App extends Component {
   componentDidMount() {
     const roomId = window.location.pathname.split('/')[2];
 
-    axios.get(`/rooms/${roomId}/x`)
+    axios.get(`/rooms/${roomId}/homeHighlights`)
       .then((res) => {
         const { data } = res;
-
         this.setState({
-          listing: data.listing,
           homeHighlights: utility.formatHomeHighlights(data),
+        });
+      });
+
+    axios.get(`/rooms/${roomId}/houseRules`)
+      .then((res) => {
+        const { data } = res;
+        this.setState({
+          houseRules: utility.formatHouseRules(data),
+        });
+      });
+
+    axios.get(`/rooms/${roomId}/amenities`)
+      .then((res) => {
+        const { data } = res;
+        this.setState({
           amenities: utility.formatAmenities(utility.collectAmenities(data)),
-          houseRules: utility.formatHouseRules(data.house_rules),
-          description: data.listing.description.split('||').join('\n').split('/').join(','),
+        });
+      });
+
+    axios.get(`/rooms/${roomId}/listingInfo`)
+      .then((res) => {
+        const { data } = res;
+        console.log(data);
+        this.setState({
+          listing: data,
+          description: data.description.split('||').join('\n').split('/').join(','),
         });
       });
   }

@@ -38,8 +38,8 @@ const collectAmenities = (data) => {
 };
 
 const formatHomeHighlights = (data) => {
-  const { header1, header2, header3 } = data.home_highlights;
-  const { message1, message2, message3 } = data.home_highlights;
+  const { header1, header2, header3 } = data;
+  const { message1, message2, message3 } = data;
   return [
     { headline: header1, message: message1 },
     { headline: header2, message: message2 },
