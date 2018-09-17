@@ -2,9 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Highlight from './Highlight';
 
+import styles from '../../public/styles/home-highlights.css';
+
 const HomeHighlights = ({ highlights }) => (
-  <div className="home-highlights">
-    <span className="title-content">
+  <div className={styles.homeHighlights}>
+    <span className={styles.titleContent}>
       HOME HIGHLIGHTS
     </span>
     {

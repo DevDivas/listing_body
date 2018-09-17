@@ -3,4 +3,4 @@ import ReactDom from 'react-dom';
 
 import App from './components/App';
 
-ReactDom.render(<App />, document.getElementById('container'));
+ReactDom.render(<App />, document.getElementById('listing-body'));

@@ -4,7 +4,8 @@ import apiKey from '../../server/apiKey';
 
 const Location = ({ city, state }) => (
   <div id="location">
-    <iframe title="location" width="600" height="450" frameBorder="0" src={`https://www.google.com/maps/embed/v1/place?key=${apiKey}&q=${city}+${state}`} allowFullScreen />
+    {console.log(`${city.split(' ').join('%20')}+${state.split(' ').join('%20')}`)}
+    <iframe title="location" width="600" height="450" frameBorder="0" src={`https://www.google.com/maps/embed/v1/place?key=${apiKey}&q=${city.split(' ').join('%20')}+${state.split(' ').join('%20')}`} allowFullScreen />
   </div>
 );
 

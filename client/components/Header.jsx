@@ -1,70 +1,72 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Header = ({ listing }) => (
-  <div className="header">
-    <div className="header-top">
+import styles from '../../public/styles/header.css';
 
-      <div className="header-top-left">
+const Header = ({ listing }) => (
+  <div className={styles.header}>
+    <div className={styles.headerTop}>
+
+      <div className={styles.headerTopLeft}>
 
         <div className="house-type">
-          <span className="title-content">
+          <span className={styles.titleContent}>
             ENTIRE HOUSE
           </span>
         </div>
 
-        <div className="listing-name">
+        <div className={styles.listingName}>
           {listing.name}
         </div>
 
-        <div className="city">
-          <a href={`https://www.google.com/maps/search/?api=1&query=${listing.city}%2C${listing.state}`} target="blank">
+        <div className={styles.city}>
+          <a href="#location">
             {listing.city}
           </a>
         </div>
 
       </div>
 
-      <div className="header-top-right">
-        <div className="host-image-wrap">
-          <img className="host-image" alt="host" src={listing.host_image} />
+      <div className={styles.headerTopRight}>
+        <div className={styles.hostImageWrap}>
+          <img className={styles.hostImage} alt="host" src={listing.host_image} />
         </div>
-        <div className="host-name">
+        <div className={styles.hostName}>
           {listing.host_name}
         </div>
       </div>
 
     </div>
 
-    <div className="header-bottom">
+    <div className={styles.headerBottom}>
 
       <div className="guests" data-guests={listing.guests}>
-        <img className="amenity-icon" src="https://s3-us-west-1.amazonaws.com/listing-body-component/amenities/guests.png" alt="guests" />
+        <img className={styles.icon} src="https://s3-us-west-1.amazonaws.com/listing-body-component/amenities/guests.png" alt="guests" />
         <span className="left-right-margin">
           {listing.guests}
         </span>
-        guests
+        {' guests'}
       </div>
       <div className="bedrooms" data-beds={listing.beds}>
-        <img className="amenity-icon" src="https://s3-us-west-1.amazonaws.com/listing-body-component/amenities/bedroom.png" alt="bedrooms" />
+        <img className={styles.icon} src="https://s3-us-west-1.amazonaws.com/listing-body-component/amenities/bedroom.png" alt="bedrooms" />
         <span className="left-right-margin">
           {Math.ceil(listing.beds / 2)}
         </span>
-        bedrooms
+        {' bedrooms'}
       </div>
       <div className="beds" data-beds={listing.beds}>
-        <img className="amenity-icon" src="https://s3-us-west-1.amazonaws.com/listing-body-component/amenities/beds.png" alt="beds" />
+        <img className={styles.icon} src="https://s3-us-west-1.amazonaws.com/listing-body-component/amenities/beds.png" alt="beds" />
         <span className="left-right-margin">
           {listing.beds}
         </span>
-        beds
+        {' beds'}
       </div>
       <div className="baths" data-baths={listing.baths}>
-        <img className="amenity-icon" src="https://s3-us-west-1.amazonaws.com/listing-body-component/amenities/baths.png" alt="baths" />
+        <img className={styles.icon} src="https://s3-us-west-1.amazonaws.com/listing-body-component/amenities/baths.png" alt="baths" />
         <span className="left-right-margin">
           {listing.baths}
         </span>
-        baths
+        {' baths'}
       </div>
 
     </div>

@@ -1,40 +1,42 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import styles from '../../public/styles/houseRules.css';
+
 const HouseRules = ({ rules, showHouseRules, toggleHouseRules }) => (
   <div className="house-rules">
     <h3>
       House Rules
     </h3>
     <div>
-      {console.log(rules)}
       {Object.keys(rules).map(
-        rule => (rules[rule] && rule !== 'id' && rule !== 'Custom message' ? (
-          <div>
+        (rule, i) => (rules[rule] && rule !== 'id' && rule !== 'Custom message' ? (
+          <div key={i}>
             {rules[rule]}
           </div>
         )
           : ''),
       )}
     </div>
-    <div className={`read-all-rules-${showHouseRules}`}>
-      {Object.keys(rules).filter(rule => rule === 'Custom message')}
+    <div className={`readAllRules${showHouseRules}`}>
+      {/* {console.log(Object.keys(rules).map(rule => rule === 'Custom message'))} */}
+      {rules[Object.keys(rules).filter(rule => rule === 'Custom message')[0]]}
     </div>
-    <span role="button" tabIndex="0" className="read-more" onClick={() => { toggleHouseRules(); }} onKeyPress={() => { toggleHouseRules(); }}>
+    <span role="button" tabIndex="0" className={styles.readMore} onClick={() => { toggleHouseRules(); }} onKeyPress={() => { toggleHouseRules(); }}>
       {
         !showHouseRules
           ? (
-            <span className="bold">
+            <span className={styles.bold}>
               Read all rules
             </span>)
           : (
-            <span className="bold">
+            <span className={styles.bold}>
               Hide ^
             </span>
           )
       }
     </span>
-    <div className="divider" />
+    <div className={styles.divider} />
   </div>
 );
 

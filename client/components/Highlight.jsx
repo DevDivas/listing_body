@@ -1,26 +1,33 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import utility from '../clientHelpers';
+
+import styles from '../../public/styles/home-highlights.css';
+import Icon from './Icon';
+
 const Highlight = ({ headline, highlight }) => (
-  <div className="highlight">
+  <div>
     <div className="headline-highlight">
-      <span className="headline bold">
+      <span className={styles.headline}>
         {headline}
       </span>
-      <span className="left-right-margin">
+      <span className={styles.leftRightMargin}>
        ·
       </span>
       {highlight}
     </div>
-    <div className="helpful-not">
-      <span className="helpful">
-        Helpful
-        <img className="amenity-icon thumbs-up" src="https://s3-us-west-1.amazonaws.com/listing-body-component/amenities/thumbs-up.png" alt="thumbs up" />
-      </span>
-      <span className="left-right-margin">
+    <div className={styles.helpfulOrNot}>
+      <div className={styles.helpful}>
+        <span>
+          Helpful
+        </span>
+        <Icon direction={utility.iconCategories.thumbsUp} />
+      </div>
+      <span className={styles.leftRightMargin}>
        ·
       </span>
-      <span className="not-helpful">
+      <span className={styles.notHelpful}>
         Not helpful
       </span>
     </div>

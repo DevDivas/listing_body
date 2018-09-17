@@ -1,30 +1,33 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import styles from '../../public/styles/modal.css';
+import main from '../../public/styles/main.css';
+
 const AmenitiesCategory = ({ category, categoryName }) => (
   <div className="category">
-    <div className="category-name">
-      <span className="font-lvl-0">
+    <div className={styles.categoryName}>
+      <span className={styles.font0}>
         {categoryName}
       </span>
     </div>
     <div>
       {Object.keys(category).map(
-        amenity => (category[amenity] === amenity && amenity !== 'Id'
+        (amenity, i) => (category[amenity] === amenity && amenity !== 'Id'
           ? (
-            <div className="no-bullet">
+            <div key={i} className="no-bullet">
               <div className="amenity">
-                <span className="font-lvl-1">
+                <span className={styles.font1}>
                   {amenity}
                 </span>
               </div>
-              <div className="divider" />
+              <div className={main.divider} />
             </div>
           )
           : (
-            <div className="no-bullet">
+            <div key={i} className="no-bullet">
               <div className="amenity">
-                <span className="font-lvl-1">
+                <span className={styles.font1}>
                   {amenity}
                 </span>
               </div>
@@ -33,7 +36,7 @@ const AmenitiesCategory = ({ category, categoryName }) => (
                   {category[amenity]}
                 </span>
               </div>
-              <div className="divider" />
+              <div className={main.divider} />
             </div>
           )),
       )}

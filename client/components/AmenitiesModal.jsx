@@ -3,18 +3,22 @@ import PropTypes from 'prop-types';
 
 import AmenitiesCategory from './AmenitiesCategory';
 
+import styles from '../../public/styles/modal.css';
+
 const AmenitiesModal = ({ amenities, toggleModal }) => (
-  <div className="modal-static">
-    <div className="modal">
-      <div className="show-modal">
-        <div className="round-button" role="button" tabIndex="0" onClick={() => { toggleModal(); }} onKeyPress={() => { toggleModal(); }}>
+  <div className={styles.modalStatic}>
+    <div className={styles.modal}>
+      <div className={styles.showModal}>
+        <div className={styles.roundButton} role="button" tabIndex="0" onClick={() => { toggleModal(); }} onKeyPress={() => { toggleModal(); }}>
           &#9587;
         </div>
-        <div className="modal-title bold">
+        <div className={styles.modalTitle}>
           Amenities
         </div>
         {Object.keys(amenities).map(
-          category => <AmenitiesCategory categoryName={category} category={amenities[category]} />,
+          (category, i) => (
+            <AmenitiesCategory key={i} categoryName={category} category={amenities[category]} />
+          ),
         )}
       </div>
     </div>
