@@ -1,9 +1,10 @@
 .DS_Store
 node_modules
 example
-database/data
-database/data.js
-database/generate-data.js
+database/data_generation/data
 public/bundle.js
 public/bundle.js.map
 coverage
+dump.sql
+ec2
+server/apiKey.js
