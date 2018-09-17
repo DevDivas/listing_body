@@ -1,0 +1,69 @@
+.header {
+  display: grid;
+}
+
+.headerTop {
+  display: grid;
+  grid-row-gap: 0;
+  grid-template-columns: 1fr 1fr;
+}
+
+.headerTopLeft {
+  display: grid;
+  margin: 0px;
+  padding: 0px;
+}
+
+.titleContent {
+  font-size: 12px;
+  font-weight: bold;
+  color: #767676;
+}
+
+.listingName {
+  color: #484848;
+  font-size: 150%;
+  grid-row: 2/3;
+  grid-column: 1/2;
+  margin: 0px;
+  padding: 0px;
+}
+
+.city {
+  font-weight: 300;
+  margin: 0px;
+  padding: 0px;
+}
+
+.headerTopRight {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.hostImageWrap {
+  grid-row: 2/3;
+  /* grid-column: 2/5; */
+}
+
+.hostImage {
+  width: 4em;
+  border-radius: 50%;
+}
+
+.hostName {
+  grid-row: 3/4;
+  /* grid-column: 2/5; */
+}
+
+.headerBottom {
+  width: 75%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.icon {
+  width: 22px;
+  margin-right: .75em;
+  margin-top: 0px;
+}

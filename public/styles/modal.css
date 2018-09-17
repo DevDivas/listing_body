@@ -1,0 +1,76 @@
+.font0 {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.font1 {
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.font2 {
+  font-weight: 100;
+  font-size: 14px;
+}
+
+.categoryName {
+  margin-bottom: 1.5em;
+}
+
+.roundButton {
+  width: 33px;
+  line-height: 33px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 300;
+  border: .01em solid #DBDBDB;
+  box-shadow: 0px 0px 10px rgb(163, 163, 163);
+  cursor: pointer;
+  margin-bottom: .75em;
+}
+
+.box-shadow {
+  box-shadow: 0px 0px 10px rgb(163, 163, 163);
+}
+
+.divider {
+  height:0px;
+  width: 100%;
+  padding-bottom: .05em;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  border: .01em solid #DBDBDB;
+}
+
+.modalStatic {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top:0;
+  left:0;
+  z-index: 1;
+}
+
+.modal {
+  background-color: rgba(255, 255, 255, 0.5);
+  overflow-y: scroll;
+  height: 100%;
+  width: 100%;
+}
+
+.showModal {
+  background-color: white;
+  box-shadow: 0px 0px 10px rgb(163, 163, 163);
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+  padding: 1.5em;
+}
+
+.modalTitle {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: .75em;
+}

@@ -1,0 +1,18 @@
+.icon {
+  width: 23px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: 0px;
+}
+
+.svg {
+  margin-left: 4px;
+  display: inline-block;
+  vertical-align: middle;
+  width: 23px;
+}
+
+.leftRightMargin {
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+}

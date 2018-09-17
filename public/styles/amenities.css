@@ -1,0 +1,30 @@
+.amenities {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.amenity-description {
+  margin-top: .75em;
+}
+
+.amenityIcon {
+  width: 22px;
+  margin-right: .75em;
+  margin-top: 0px;
+}
+
+.amenitiesPreview {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.divider {
+  height:0px;
+  width: 100%;
+  padding-bottom: .05em;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  border: .01em solid #DBDBDB;
+}

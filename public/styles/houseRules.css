@@ -1,0 +1,35 @@
+.readAllRulesfalse {
+  visibility: hidden;
+  max-height: 0px;
+  transition: 1.5s;
+}
+
+.readAllRulestrue {
+  transition: 1.5s;
+  visibility: visible;
+  height: auto;
+  max-height: 1000px;
+}
+
+.readMore {
+  color: #118488;
+  font-weight: 600;
+}
+
+.readMore:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.divider {
+  height:0px;
+  width: 100%;
+  padding-bottom: .05em;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  border: .01em solid #DBDBDB;
+}
+
+.bold {
+  font-weight: 600;
+}

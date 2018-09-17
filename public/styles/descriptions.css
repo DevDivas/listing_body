@@ -1,0 +1,36 @@
+.descriptionBottomtrue {
+  visibility: hidden;
+  max-height: 0px;
+  transition: 0.5s ease-out;
+}
+
+.descriptionBottomfalse {
+  transition: 0.5s ease-out;
+  visibility: visible;
+  height: auto;
+  max-height: 1000px;
+}
+
+.readMore {
+  color: #118488;
+  font-weight: 600;
+}
+
+.readMore:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.topBottomPadding {
+  padding-top: .75em;
+  padding-bottom: .75em;
+}
+
+.divider {
+  height:0px;
+  width: 100%;
+  padding-bottom: .05em;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  border: .01em solid #DBDBDB;
+}
