@@ -6,3 +6,4 @@ database/data.js
 database/generate-data.js
 public/bundle.js
 public/bundle.js.map
+coverage
