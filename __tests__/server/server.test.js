@@ -1,5 +1,5 @@
 const request = require('supertest');
-const app = require('../../server/app');
+const app = require('../../server/server');
 
 describe('GET requests', () => {
   it('should respond with status code 301', () => request(app).get('/rooms/1').then((response) => {
