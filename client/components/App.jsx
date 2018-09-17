@@ -85,6 +85,9 @@ class App extends Component {
       showHouseRules,
     } = this.state;
 
+    const city = listing.city ? listing.city.split(' ').join('%20') : undefined;
+    const state = listing.state ? listing.state.split(' ').join('%20') : undefined;
+
     return (
       <div className={styles.wrapper}>
         {
@@ -109,7 +112,7 @@ class App extends Component {
           showHouseRules={showHouseRules}
           rules={houseRules}
         />
-        <Location city={listing.city} state={listing.state} />
+        <Location city={city} state={state} />
       </div>
     );
   }
