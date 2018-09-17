@@ -4,7 +4,6 @@ import apiKey from '../../keys/googleMapsEmbedKey';
 
 const Location = ({ city, state }) => (
   <div id="location">
-    {console.log(`${city}+${state}`)}
     <iframe title="location" width="600" height="450" frameBorder="0" src={`https://www.google.com/maps/embed/v1/place?key=${apiKey}&q=${city}+${state}`} allowFullScreen />
   </div>
 );
